@@ -710,7 +710,8 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "MediatR": "9.0.0",
-          "PagueVeloz.Contas.Dominio": "1.0.0"
+          "PagueVeloz.Contas.Dominio": "1.0.0",
+          "PagueVeloz.Eventos": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PagueVeloz.Contas.Aplicacao.dll": {}

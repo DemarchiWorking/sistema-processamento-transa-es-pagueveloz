@@ -133,6 +133,9 @@
             "projectReferences": {
               "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj": {
                 "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj"
+              },
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj"
               }
             }
           }

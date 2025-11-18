@@ -3,48 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\corefinanceiro\\operacaofinanceirafalhouevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\corefinanceiro\\operacaofinanceirafalhouevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|solutionrelative:src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\corefinanceiro\\estornoefetuadoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\corefinanceiro\\estornoefetuadoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\interfaces\\icontarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|solutionrelative:src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\interfaces\\icontarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\corefinanceiro\\reservacapturadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\corefinanceiro\\reservacapturadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|solutionrelative:src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\corefinanceiro\\saldoscontadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\corefinanceiro\\saldoscontadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\comandos\\criarcontacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|solutionrelative:src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\comandos\\criarcontacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\corefinanceiro\\reservaefetuadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\corefinanceiro\\reservaefetuadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\corefinanceiro\\contadebitadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\corefinanceiro\\contadebitadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\contas\\contacriadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\contas\\contacriadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\corefinanceiro\\contacreditadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\corefinanceiro\\contacreditadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\contas\\statusdacontaalteradoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\contas\\statusdacontaalteradoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\contas\\statusconta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\contas\\statusconta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\3-crosscutting\\eventos\\contas\\limitedecreditoalteradoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BDF75C8-4D7F-4CDD-89CC-6C03F516648D}|src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj|solutionrelative:src\\3-crosscutting\\eventos\\contas\\limitedecreditoalteradoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|c:\\users\\antonio demarchi\\source\\repos\\meta\\src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\comandos\\criarcontacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72E038BF-8D2B-408F-8F5B-89FEDB5FF471}|src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj|solutionrelative:src\\2-servicos\\contas.api\\pagueveloz.contas.aplicacao\\comandos\\criarcontacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,149 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SaldosContaDto.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\SaldosContaDto.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\SaldosContaDto.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\SaldosContaDto.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\SaldosContaDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:59:32.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ReservaEfetuadaEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ReservaEfetuadaEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ReservaEfetuadaEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ReservaEfetuadaEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ReservaEfetuadaEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:59:05.166Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReservaCapturadaEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ReservaCapturadaEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ReservaCapturadaEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ReservaCapturadaEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ReservaCapturadaEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:58:44.842Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "OperacaoFinanceiraFalhouEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\OperacaoFinanceiraFalhouEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\OperacaoFinanceiraFalhouEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\OperacaoFinanceiraFalhouEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\OperacaoFinanceiraFalhouEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:57:32.804Z",
+              "WhenOpened": "2025-11-18T02:29:58.736Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EstornoEfetuadoEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\EstornoEfetuadoEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\EstornoEfetuadoEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\EstornoEfetuadoEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\EstornoEfetuadoEvent.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:57:03.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ContaDebitadaEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ContaDebitadaEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ContaDebitadaEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ContaDebitadaEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ContaDebitadaEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:55:33.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ContaCreditadaEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ContaCreditadaEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ContaCreditadaEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ContaCreditadaEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\CoreFinanceiro\\ContaCreditadaEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:53:30.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StatusDaContaAlteradoEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\Contas\\StatusDaContaAlteradoEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\Contas\\StatusDaContaAlteradoEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\Contas\\StatusDaContaAlteradoEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\Contas\\StatusDaContaAlteradoEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:53:04.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StatusConta.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\Contas\\StatusConta.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\Contas\\StatusConta.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\Contas\\StatusConta.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\Contas\\StatusConta.cs",
+              "Title": "IContaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IContaRepository.cs",
+              "RelativeDocumentMoniker": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IContaRepository.cs",
+              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IContaRepository.cs",
+              "RelativeToolTip": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IContaRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:53:00.728Z",
+              "WhenOpened": "2025-11-18T02:29:56.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LimiteDeCreditoAlteradoEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\Contas\\LimiteDeCreditoAlteradoEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\Contas\\LimiteDeCreditoAlteradoEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\Contas\\LimiteDeCreditoAlteradoEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\Contas\\LimiteDeCreditoAlteradoEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IClienteRepository.cs",
+              "RelativeDocumentMoniker": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IClienteRepository.cs",
+              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IClienteRepository.cs",
+              "RelativeToolTip": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Interfaces\\IClienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:52:35.246Z",
+              "WhenOpened": "2025-11-18T02:29:54.547Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ContaCriadaEvent.cs",
-              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\Contas\\ContaCriadaEvent.cs",
-              "RelativeDocumentMoniker": "src\\3-Crosscutting\\Eventos\\Contas\\ContaCriadaEvent.cs",
-              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\Contas\\ContaCriadaEvent.cs",
-              "RelativeToolTip": "src\\3-Crosscutting\\Eventos\\Contas\\ContaCriadaEvent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "CriarContaCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Comandos\\CriarContaCommand.cs",
+              "RelativeDocumentMoniker": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Comandos\\CriarContaCommand.cs",
+              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Comandos\\CriarContaCommand.cs",
+              "RelativeToolTip": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Comandos\\CriarContaCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T00:51:43.464Z",
+              "WhenOpened": "2025-11-18T02:29:48.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CriarContaCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Comandos\\CriarContaCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Comandos\\CriarContaCommandHandler.cs",
+              "ToolTip": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Comandos\\CriarContaCommandHandler.cs",
+              "RelativeToolTip": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\Comandos\\CriarContaCommandHandler.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T02:23:23.454Z",
               "EditorCaption": ""
             }
           ]
