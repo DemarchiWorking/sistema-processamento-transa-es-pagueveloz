@@ -1,12 +1,37 @@
-var builder = WebApplication.CreateBuilder(args);
+using MassTransit;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using PagueVeloz.Contas.Aplicacao.Interfaces;
+using PagueVeloz.Contas.Infra.Data;
+using PagueVeloz.Contas.Infra.Data.Repositories;
+using PagueVeloz.Contas.Aplicacao.Comandos;
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
+var configuration = builder.Configuration;
+
+
 builder.Services.AddOpenApi();
 
+//#######################
+services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(CriarContaCommand).Assembly);
+});
+
+builder.Services.AddDbContext<ContasDbContext>(options =>
+    options.UseNpgsql(configuration.GetConnectionString("ContaConnection")));
+
+services.AddScoped<IClienteRepository, ClienteRepository>();
+services.AddScoped<IContaRepository, ContaRepository>();
+services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
+//#######################
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+//configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

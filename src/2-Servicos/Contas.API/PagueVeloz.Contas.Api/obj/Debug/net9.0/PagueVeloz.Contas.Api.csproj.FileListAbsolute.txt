@@ -1,0 +1,8 @@
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\obj\Debug\net9.0\PagueVeloz.Contas.Api.csproj.AssemblyReference.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\obj\Debug\net9.0\PagueVeloz.Contas.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\obj\Debug\net9.0\PagueVeloz.Contas.Api.AssemblyInfoInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\obj\Debug\net9.0\PagueVeloz.Contas.Api.AssemblyInfo.cs
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\obj\Debug\net9.0\PagueVeloz.Contas.Api.csproj.CoreCompileInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\obj\Debug\net9.0\PagueVeloz.Contas.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\obj\Debug\net9.0\PagueVeloz.Contas.Api.sourcelink.json

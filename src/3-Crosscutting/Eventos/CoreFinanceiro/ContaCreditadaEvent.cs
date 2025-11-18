@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace PagueVeloz.Eventos.CoreFinanceiro
 {
     ///<summary>
-    ///Evento publicado quando um credito eh processado com sucesso.
-    ///Consumido pelo Transferencias.API e por outros sistemas.
+    ///evento publicado quando um credito eh processado com sucesso.
     ///</summary>
     ///<param name="AccountId">ID unico da conta.</param>
     ///<param name="TransactionId">ID da transacao processada.</param>
@@ -21,6 +20,9 @@ namespace PagueVeloz.Eventos.CoreFinanceiro
         string TransactionId,
         string ReferenceId,
         long ValorCreditado,
+        string Currency,
+        string? Metadata,
         SaldosContaDto NovosSaldos,
-        DateTime Timestamp);
+        DateTime Timestamp
+    );
 }

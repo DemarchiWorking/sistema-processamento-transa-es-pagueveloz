@@ -1,0 +1,12 @@
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\bin\Debug\net9.0\PagueVeloz.Eventos.deps.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\bin\Debug\net9.0\PagueVeloz.Eventos.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\bin\Debug\net9.0\PagueVeloz.Eventos.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\PagueVeloz.Eventos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\PagueVeloz.Eventos.AssemblyInfoInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\PagueVeloz.Eventos.AssemblyInfo.cs
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\PagueVeloz.Eventos.csproj.CoreCompileInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\PagueVeloz.Eventos.sourcelink.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\PagueVeloz.Eventos.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\refint\PagueVeloz.Eventos.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\PagueVeloz.Eventos.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Eventos\obj\Debug\net9.0\ref\PagueVeloz.Eventos.dll

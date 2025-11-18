@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PagueVeloz.CoreFinanceiro.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1f89ee270d850a70016f6203b501dde562b8144")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0807bcc258fcd80a87c6f174f8649900593305ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("PagueVeloz.CoreFinanceiro.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PagueVeloz.CoreFinanceiro.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

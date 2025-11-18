@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OKJVzh0AijU=",
+  "dgSpecHash": "FSVo1EFSTL0=",
   "success": true,
   "projectFilePath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Infra\\PagueVeloz.CoreFinanceiro.Infra.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+    "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
+    "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

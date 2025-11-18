@@ -1,0 +1,6 @@
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Infra\obj\Debug\net9.0\PagueVeloz.Contas.Infra.csproj.AssemblyReference.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Infra\obj\Debug\net9.0\PagueVeloz.Contas.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Infra\obj\Debug\net9.0\PagueVeloz.Contas.Infra.AssemblyInfoInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Infra\obj\Debug\net9.0\PagueVeloz.Contas.Infra.AssemblyInfo.cs
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Infra\obj\Debug\net9.0\PagueVeloz.Contas.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Contas.API\PagueVeloz.Contas.Infra\obj\Debug\net9.0\PagueVeloz.Contas.Infra.sourcelink.json

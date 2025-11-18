@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿//using MassTransit;
+using MediatR;
 using PagueVeloz.Contas.Aplicacao.Interfaces;
 using PagueVeloz.Contas.Dominio.Aggregates;
 using System;
@@ -6,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using PagueVeloz.Eventos.Contas;
 
 namespace PagueVeloz.Contas.Aplicacao.Comandos
 {
@@ -18,15 +21,21 @@ namespace PagueVeloz.Contas.Aplicacao.Comandos
         private readonly IClienteRepository _clienteRepository;
         private readonly IContaRepository _contaRepository;
         private readonly IUnitOfWork _unitOfWork;
+        //private readonly IPublishEndpoint _publishEndpoint;  //alerta:MassTransit
+
+        //private readonly IPublishEndpoint _publishEndpoint;
 
         public CriarContaCommandHandler(
             IClienteRepository clienteRepository,
             IContaRepository contaRepository,
-            IUnitOfWork unitOfWork)
+            IUnitOfWork unitOfWork//,
+            //IPublishEndpoint publishEndpoint
+            ) 
         {
             _clienteRepository = clienteRepository;
             _contaRepository = contaRepository;
             _unitOfWork = unitOfWork;
+            //_publishEndpoint = publishEndpoint;
         }
 
         public async Task<CriarContaResponse> Handle(CriarContaCommand request, CancellationToken cancellationToken)
@@ -42,9 +51,9 @@ namespace PagueVeloz.Contas.Aplicacao.Comandos
             //execucao [regra de dominio]
             //chamar a fabrica do agregado para criar a conta.
             var conta = Conta.Criar(
-                request.ClientId,
-                request.CreditLimit
-            );
+                        request.ClientId,
+                        request.CreditLimit
+                    );
 
             //persistencia [inicio da transacao]
             //adicionar o novo agregado ao repositorio.
@@ -52,12 +61,14 @@ namespace PagueVeloz.Contas.Aplicacao.Comandos
 
             //criacao do evento integracao
             var evento = new ContaCriadaEvent(
-                conta.Id,
-                conta.ClienteId,
-                conta.LimiteDeCredito,
-                (PagueVeloz.Eventos.Contas.StatusConta)conta.Status,
-                DateTime.UtcNow
-            );
+                            conta.Id,
+                            conta.ClienteId,
+                            conta.LimiteDeCredito,
+                            (PagueVeloz.Eventos.Contas.StatusConta)conta.Status,
+                            DateTime.UtcNow,
+                            request.InitialBalance
+                        );
+            //await _publishEndpoint.Publish(evento, cancellationToken);
 
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 
@@ -67,7 +78,7 @@ namespace PagueVeloz.Contas.Aplicacao.Comandos
                 conta.ClienteId,
                 conta.LimiteDeCredito,
                 conta.Status.ToString(),
-                DateTime.UtcNow //pegar do banco
+                DateTime.UtcNow  //<<pegar do banco
             );
         }
     }
