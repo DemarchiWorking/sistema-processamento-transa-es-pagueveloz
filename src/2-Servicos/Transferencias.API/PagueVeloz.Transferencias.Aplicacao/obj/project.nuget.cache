@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "S/HSAzEx8sk=",
+  "dgSpecHash": "ZOL9HJBqvt0=",
   "success": true,
   "projectFilePath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Transferencias.API\\PagueVeloz.Transferencias.Aplicacao\\PagueVeloz.Transferencias.Aplicacao.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
