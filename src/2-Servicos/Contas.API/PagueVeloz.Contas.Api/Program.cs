@@ -1,20 +1,36 @@
 using MassTransit;
 using MediatR;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using PagueVeloz.Contas.Aplicacao.Comandos;
 using PagueVeloz.Contas.Aplicacao.Interfaces;
 using PagueVeloz.Contas.Infra.Data;
 using PagueVeloz.Contas.Infra.Data.Repositories;
-using PagueVeloz.Contas.Aplicacao.Comandos;
+using PagueVeloz.Shared.Infra.Logging;
+
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.AddSerilogLogging("Contas.API");
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Contas API", Version = "v1" });
+});
+builder.Services.AddControllers();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CorsPolicy",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
+
 var services = builder.Services;
 var configuration = builder.Configuration;
 
-
 builder.Services.AddOpenApi();
 
-//#######################
 
 services.AddMediatR(cfg =>
 {
@@ -30,7 +46,6 @@ services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 services.AddMassTransit(busConfig =>
 {
-    //barramento [RabbitMQ]
     busConfig.UsingRabbitMq((context, cfg) =>
     {
         cfg.Host(configuration["MessageBroker:Host"], "/", h =>
@@ -42,50 +57,55 @@ services.AddMassTransit(busConfig =>
         cfg.ConfigureEndpoints(context);
     });
 
-    //outbox
-    //fazer o masstransit usar o EF Core como seu Outbox
     busConfig.AddEntityFrameworkOutbox<ContasDbContext>(o =>
     {
-        //Outbox publica evento
         o.UseBusOutbox();
 
-        //configura o banco
         o.UsePostgres();
 
-        //define com que frequencia o worker verificara o outbox
         o.QueryDelay = TimeSpan.FromSeconds(10);
     });
 });
-//#######################
+
 var app = builder.Build();
 
-//configure the HTTP request pipeline.
+try
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var serviceProvider = scope.ServiceProvider;
+
+        var logger = serviceProvider.GetRequiredService<ILogger<Program>>();
+
+        try
+        {
+            var context = serviceProvider.GetRequiredService<ContasDbContext>();
+            context.Database.Migrate();
+            logger.LogInformation("Migrações aplicadas com sucesso.");
+        }
+        catch (Exception dbEx)
+        {
+            logger.LogError(dbEx, "Ocorreu um erro FATAL ao aplicar as migrações ao banco de dados.");
+
+            throw;
+        }
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Erro Durante as migracoes:" + ex);
+}
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
-
+app.UseCors("CorsPolicy");
+app.MapControllers();
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)

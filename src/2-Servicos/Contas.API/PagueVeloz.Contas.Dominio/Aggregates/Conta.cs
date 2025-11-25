@@ -7,41 +7,22 @@ using System.Threading.Tasks;
 
 namespace PagueVeloz.Contas.Dominio.Aggregates
 {
-    ///<summary>
-    ///agregado Conta.
-    /// </summary>
     public class Conta
     {
-        ///<summary>
-        ///id unico da conta.
-        /// </summary>
         public string Id { get; private set; } = string.Empty;
 
-        ///<summary>
-        ///chave estrangeira para o agregado cliente.
-        ///</summary>
         public string ClienteId { get; private set; } = string.Empty;
 
-        ///<summary>
-        ///limite de credito em centavos.
-        ///</summary>
         public long LimiteDeCredito { get; private set; }
 
-        ///<summary>
-        ///status atual da conta.
-        ///</summary>
         public StatusConta Status { get; private set; }
 
-        //construtor privado
+        public uint LockVersion { get; private set; } = 1;
         private Conta() { }
 
-        ///<summary>
-        ///metodo de fabrica para criar uma nova conta.
-        ///garante que as regras sejam aplicadas na criacao.
-        ///</summary>
-        public static Conta Criar(string clienteId, long limiteDeCredito)
+        public static Conta Criar(long id,string clienteId, long limiteDeCredito)
         {
-            //Guard Clauses | validacoes de dominio)
+
             if (string.IsNullOrWhiteSpace(clienteId))
                 throw new ArgumentException("A conta deve pertencer a um cliente.", nameof(clienteId));
 
@@ -50,31 +31,23 @@ namespace PagueVeloz.Contas.Dominio.Aggregates
 
             var conta = new Conta
             {
-                //geramos o id aqui para garantir que ele exista antes de salvar.
-                Id = $"ACC-{Guid.NewGuid():N}",
+                Id = $"ACC-{id}",
                 ClienteId = clienteId,
                 LimiteDeCredito = limiteDeCredito,
-                Status = StatusConta.Active //nova conta sempre comeca ativada
+                Status = StatusConta.Active, 
+                LockVersion = 1 
             };
 
             return conta;
         }
 
-        ///<summary>
-        ///metodo de negocio para alterar o limite de credito.
-        ///</summary>
         public void AlterarLimiteDeCredito(long novoLimite)
         {
             if (novoLimite < 0)
                 throw new ArgumentException("O limite de crédito não pode ser negativo.", nameof(novoLimite));
 
             LimiteDeCredito = novoLimite;
-            //this.AddDomainEvent(new LimiteAlteradoDomainEvent(this.Id, novoLimite));
         }
-
-        ///<summary>
-        ///metodo de negocio para bloquear a conta.
-        ///</summary>
         public void Bloquear()
         {
             if (Status == StatusConta.Blocked) return;

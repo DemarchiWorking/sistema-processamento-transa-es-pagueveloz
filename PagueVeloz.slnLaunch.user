@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "Novo Perfil",
+    "Projects": [
+      {
+        "Path": "src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Api\\PagueVeloz.Contas.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Api\\PagueVeloz.CoreFinanceiro.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\2-Servicos\\Transferencias.API\\PagueVeloz.Transferencias.Api\\PagueVeloz.Transferencias.Api.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

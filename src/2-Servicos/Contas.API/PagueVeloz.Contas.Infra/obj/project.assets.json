@@ -1142,6 +1142,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "MassTransit": "8.5.5",
           "MediatR": "9.0.0",
           "PagueVeloz.Contas.Dominio": "1.0.0",
           "PagueVeloz.Eventos": "1.0.0"
@@ -3340,6 +3341,7 @@
       "MediatR >= 12.5.0",
       "Microsoft.EntityFrameworkCore >= 9.0.11",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.11",
+      "Microsoft.EntityFrameworkCore.Relational >= 9.0.11",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
       "PagueVeloz.Contas.Aplicacao >= 1.0.0",
       "PagueVeloz.Contas.Dominio >= 1.0.0",
@@ -3426,6 +3428,10 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.0.11, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[9.0.11, )"
           },

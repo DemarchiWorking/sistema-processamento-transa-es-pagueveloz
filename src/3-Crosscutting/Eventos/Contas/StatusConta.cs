@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace PagueVeloz.Eventos.Contas
 {
-    ///<summary>
-    ///define os possiveis status de uma conta.
-    ///</summary>
     public enum StatusConta
     {
         Active,

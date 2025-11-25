@@ -1,0 +1,12 @@
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\bin\Debug\net9.0\PagueVeloz.Testes.Comum.deps.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\bin\Debug\net9.0\PagueVeloz.Testes.Comum.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\bin\Debug\net9.0\PagueVeloz.Testes.Comum.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\PagueVeloz.Testes.Comum.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\PagueVeloz.Testes.Comum.AssemblyInfoInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\PagueVeloz.Testes.Comum.AssemblyInfo.cs
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\PagueVeloz.Testes.Comum.csproj.CoreCompileInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\PagueVeloz.Testes.Comum.sourcelink.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\PagueVeloz.Testes.Comum.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\refint\PagueVeloz.Testes.Comum.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\PagueVeloz.Testes.Comum.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\5-Testes\PagueVeloz.Testes.Comum\obj\Debug\net9.0\ref\PagueVeloz.Testes.Comum.dll

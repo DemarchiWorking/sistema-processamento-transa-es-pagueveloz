@@ -6,9 +6,6 @@ using System.Threading.Tasks;
 
 namespace PagueVeloz.Eventos.CoreFinanceiro
 {
-    ///<summary>
-    ///Evento publicado quando um valor eh movido de disponivel p/ Reservado.
-    ///</summary>
     public record ReservaEfetuadaEvent(
         string AccountId,
         string TransactionId,

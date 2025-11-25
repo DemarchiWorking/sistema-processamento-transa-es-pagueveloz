@@ -6,27 +6,14 @@ using System.Threading.Tasks;
 
 namespace PagueVeloz.Contas.Dominio.Aggregates
 {
-    ///<summary>
-    ///Agregado 'Cliente'.
-    ///Representa o dono das contas. Neste contexto, ele é simples,
-    ///mas serve como ponto de validação.
-    ///</summary>
+
     public class Cliente
     {
-        ///<summary>
-        ///id unico do cliente.
-        ///</summary>
         public string Id { get; private set; } = string.Empty;
-
-        ///<summary>
-        ///nome do cliente.
-        ///</summary>
         public string Nome { get; private set; } = string.Empty;
 
-        //construtor privado
         private Cliente() { }
 
-        //metodo de fabrica para criacao
         public static Cliente Criar(string id, string nome)
         {
             if (string.IsNullOrWhiteSpace(id))
@@ -35,7 +22,7 @@ namespace PagueVeloz.Contas.Dominio.Aggregates
             return new Cliente
             {
                 Id = id,
-                Nome = string.IsNullOrWhiteSpace(nome) ? "cliente anonimo" : nome
+                Nome = string.IsNullOrWhiteSpace(nome) ? "Cliente Anônimo" : nome 
             };
         }
     }

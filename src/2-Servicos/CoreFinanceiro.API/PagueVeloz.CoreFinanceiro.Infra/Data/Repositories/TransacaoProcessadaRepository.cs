@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PagueVeloz.CoreFinanceiro.Aplicacao.Interfaces;
-using PagueVeloz.CoreFinanceiro.Dominio.Aggregates;
+using PagueVeloz.CoreFinanceiro.Dominio.Entidades;
+using PagueVeloz.CoreFinanceiro.Dominio.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +11,9 @@ namespace PagueVeloz.CoreFinanceiro.Infra.Data.Repositories
 {
     public class TransacaoProcessadaRepository : ITransacaoProcessadaRepository
     {
-        private readonly CoreFinanceiroDbContext _context;
+        private readonly CoreFinanceiroContext _context;
 
-        public TransacaoProcessadaRepository(CoreFinanceiroDbContext context)
+        public TransacaoProcessadaRepository(CoreFinanceiroContext context)
         {
             _context = context;
         }

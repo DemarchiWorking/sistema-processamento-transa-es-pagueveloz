@@ -1,42 +1,64 @@
-using MassTransit;
+ using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using PagueVeloz.CoreFinanceiro.Api;
+using PagueVeloz.CoreFinanceiro.Aplicacao;
 using PagueVeloz.CoreFinanceiro.Aplicacao.Eventos; //consumer
-using PagueVeloz.CoreFinanceiro.Aplicacao.Interfaces;
+using PagueVeloz.CoreFinanceiro.Aplicacao.Projetores;
+using PagueVeloz.CoreFinanceiro.Dominio.Entidades;
+using PagueVeloz.CoreFinanceiro.Dominio.Interfaces;
 using PagueVeloz.CoreFinanceiro.Infra.Data;
 using PagueVeloz.CoreFinanceiro.Infra.Data.Repositories;
+using PagueVeloz.CoreFinanceiro.Infra.Data.Servicos;
+using PagueVeloz.CoreFinanceiro.Infra.Worker.PagueVeloz.CoreFinanceiro.Infra.Workers;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
 var configuration = builder.Configuration;
+services.AddHostedService<MigrationHostedService>();
+
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Core Financeiro API", Version = "v1" });
+});
 
 services.AddControllers();
 
-services.AddDbContext<CoreFinanceiroDbContext>(options =>
+services.AddDbContext<CoreFinanceiroContext>(options =>
     options.UseNpgsql(configuration.GetConnectionString("FinanceiroConnection")));
 
 builder.Services.AddOpenApi();
-services.AddScoped<IContaRepository, ContaRepository>(); //implementacao d infra
-services.AddScoped<IUnitOfWork, UnitOfWork>();
-services.AddScoped<ITransacaoProcessadaRepository, TransacaoProcessadaRepository>();
+builder.Services.AddScoped<IContaRepository, ContaRepository>();
+builder.Services.AddScoped<ITransacaoProcessadaRepository, TransacaoProcessadaRepository>();
+builder.Services.AddSingleton<IMessagePublisher, MockMessagePublisher>();
+builder.Services.AddSingleton<IMessageBrokerPublisher, MockMessagePublisher>();
 
-services.AddDbContext<CoreFinanceiroDbContext>(options =>
-    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddHostedService<OutboxProcessorWorker>();
+builder.Services.AddHostedService<OutboxMessageProcessor>();
+builder.Services.AddScoped<IDomainEventService, DomainEventService>();
+
+
+services.AddScoped<IUnitOfWork, UnitOfWork>(provider =>
+{
+    var context = provider.GetRequiredService<CoreFinanceiroContext>();
+    const int DefaultRetries = 3; 
+    return new UnitOfWork(context, DefaultRetries);
+});
+builder.Services.AddScoped<IProjetorRepository<TransacaoProjecao>, ProjetorRepository<TransacaoProjecao>>();
+
 
 services.AddMediatR(cfg =>
-    cfg.RegisterServicesFromAssembly(typeof(PagueVeloz.CoreFinanceiro.Aplicacao.Interfaces.IApplicationMarker).Assembly)); // (Crie uma interface 'IApplicationMarker' na Aplicação)
+    cfg.RegisterServicesFromAssembly(typeof(IApplicationMarker).Assembly)); 
 
 services.AddMassTransit(busConfig =>
 {
-
     busConfig.AddConsumer<ContaCriadaConsumer>();
+    busConfig.AddConsumer<ContaTransacaoProjetor>();
 
-    //registra outbox // p o _publishEndpoint.Publish()
-    busConfig.AddEntityFrameworkOutbox<CoreFinanceiroDbContext>(o =>
+    busConfig.AddEntityFrameworkOutbox<CoreFinanceiroContext>(o =>
     {
         o.UseBusOutbox();
         o.UsePostgres();
     });
-
 
     busConfig.UsingRabbitMq((context, cfg) =>
     {
@@ -45,17 +67,25 @@ services.AddMassTransit(busConfig =>
             h.Username(configuration["MessageBroker:Username"]);
             h.Password(configuration["MessageBroker:Password"]);
         });
-
         cfg.ReceiveEndpoint("corefinanceiro-conta-criada", e =>
         {
-            //middleware do inbox (idempotentenc)
-            e.UseEntityFrameworkOutbox<CoreFinanceiroDbContext>(context);
-
-            //conecta o consumidor a esta fila
+            e.UseEntityFrameworkOutbox<CoreFinanceiroContext>(context);
             e.ConfigureConsumer<ContaCriadaConsumer>(context);
+        });
+
+        cfg.ReceiveEndpoint("corefinanceiro-transacao-projetor", e =>
+        {
+          
+
+            e.ConfigureConsumer<ContaTransacaoProjetor>(context);
+            e.UseMessageRetry(r =>
+                r.Interval(3, TimeSpan.FromSeconds(5))
+            );
         });
     });
 });
+
+
 
 var app = builder.Build();
 
@@ -64,66 +94,16 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
+if (app.Environment.IsDevelopment())
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
-
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 
-/*
- * 
- * 
-services.AddMassTransit(busConfig =>
-{
-    busConfig.AddEntityFrameworkInbox<CoreFinanceiroDbContext>();
+app.UseHttpsRedirection();
 
-    busConfig.AddConsumer<ContaCriadaConsumer>();
+app.MapControllers();
+app.Run();
 
-    busConfig.UsingRabbitMq((context, cfg) =>
-    {
-        cfg.Host(configuration["MessageBroker:Host"], "/", h =>
-        {
-            h.Username(configuration["MessageBroker:Username"]);
-            h.Password(configuration["MessageBroker:Password"]);
-        });
-
-        cfg.ReceiveEndpoint("corefinanceiro-conta-criada", e =>
-        {
-            e.UseEntityFrameworkOutbox<CoreFinanceiroDbContext>(context);
-
-            e.ConfigureConsumer<ContaCriadaConsumer>(context);
-        });
-    });
-
-    busConfig.AddEntityFrameworkOutbox<CoreFinanceiroDbContext>(o =>
-    {
-        o.UseBusOutbox();
-        o.UsePostgres();
-    });
-});
-
-*/

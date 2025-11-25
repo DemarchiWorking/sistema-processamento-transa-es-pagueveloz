@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PagueVeloz.Contas.Aplicacao.Interfaces;
+using PagueVeloz.Contas.Dominio.Aggregates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,12 +18,20 @@ namespace PagueVeloz.Contas.Infra.Data.Repositories
             _context = context;
         }
 
+        public void Adicionar(Cliente cliente)
+        {
+            _context.Clientes.Add(cliente);
+        }
+
         public async Task<bool> ExisteAsync(string clienteId, CancellationToken cancellationToken)
         {
-            //checar existencia.
             return await _context.Clientes
-                .AsNoTracking() //queries de leitura
-                .AnyAsync(c => c.Id == clienteId, cancellationToken);
+        .AsNoTracking()
+        .AnyAsync(c => c.Id == clienteId, cancellationToken);
+        
+        //    return await _context.Clientes
+        //        .AsNoTracking()
+        //        .AnyAsync(c => c.Id == clienteId, cancellationToken);
         }
     }
 }

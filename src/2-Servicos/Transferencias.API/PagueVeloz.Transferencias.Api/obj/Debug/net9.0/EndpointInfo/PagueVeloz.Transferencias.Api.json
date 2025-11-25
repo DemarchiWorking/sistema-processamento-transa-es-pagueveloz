@@ -1,0 +1,62 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "PagueVeloz.Transferencias.Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Transfers": {
+      "post": {
+        "tags": [
+          "Transfers"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransferenciaRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransferenciaRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TransferenciaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TransferenciaRequest": {
+        "type": "object",
+        "properties": {
+          "contaOrigem": {
+            "type": "string",
+            "nullable": true
+          },
+          "contaDestino": {
+            "type": "string",
+            "nullable": true
+          },
+          "valor": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

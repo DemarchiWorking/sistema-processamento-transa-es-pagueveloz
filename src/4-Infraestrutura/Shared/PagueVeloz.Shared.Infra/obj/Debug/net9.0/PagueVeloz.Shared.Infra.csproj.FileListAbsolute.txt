@@ -1,0 +1,13 @@
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\bin\Debug\net9.0\PagueVeloz.Shared.Infra.deps.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\bin\Debug\net9.0\PagueVeloz.Shared.Infra.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\bin\Debug\net9.0\PagueVeloz.Shared.Infra.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\PagueVeloz.Shared.Infra.csproj.AssemblyReference.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\PagueVeloz.Shared.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\PagueVeloz.Shared.Infra.AssemblyInfoInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\PagueVeloz.Shared.Infra.AssemblyInfo.cs
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\PagueVeloz.Shared.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\PagueVeloz.Shared.Infra.sourcelink.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\PagueVeloz.Shared.Infra.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\refint\PagueVeloz.Shared.Infra.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\PagueVeloz.Shared.Infra.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\obj\Debug\net9.0\ref\PagueVeloz.Shared.Infra.dll

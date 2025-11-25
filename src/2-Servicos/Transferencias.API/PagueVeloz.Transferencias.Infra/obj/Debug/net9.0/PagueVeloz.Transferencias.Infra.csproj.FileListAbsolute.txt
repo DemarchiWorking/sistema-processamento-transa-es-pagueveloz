@@ -1,4 +1,5 @@
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\bin\Debug\net9.0\PagueVeloz.Transferencias.Infra.deps.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\bin\Debug\net9.0\PagueVeloz.Transferencias.Infra.runtimeconfig.json
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\bin\Debug\net9.0\PagueVeloz.Transferencias.Infra.dll
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\bin\Debug\net9.0\PagueVeloz.Transferencias.Infra.pdb
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\bin\Debug\net9.0\PagueVeloz.Eventos.dll
@@ -17,4 +18,5 @@ C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\Pa
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\obj\Debug\net9.0\PagueVeloz.Transferencias.Infra.dll
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\obj\Debug\net9.0\refint\PagueVeloz.Transferencias.Infra.dll
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\obj\Debug\net9.0\PagueVeloz.Transferencias.Infra.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\obj\Debug\net9.0\PagueVeloz.Transferencias.Infra.genruntimeconfig.cache
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\obj\Debug\net9.0\ref\PagueVeloz.Transferencias.Infra.dll

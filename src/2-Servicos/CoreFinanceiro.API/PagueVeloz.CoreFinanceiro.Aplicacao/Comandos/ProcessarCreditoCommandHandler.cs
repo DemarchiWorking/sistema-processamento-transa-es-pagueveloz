@@ -1,14 +1,17 @@
 ﻿using MassTransit;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using PagueVeloz.CoreFinanceiro.Aplicacao.Interfaces;
-using PagueVeloz.CoreFinanceiro.Dominio.Aggregates;
+using PagueVeloz.CoreFinanceiro.Dominio.DTOs.Response;
+using PagueVeloz.CoreFinanceiro.Dominio.Entidades;
 using PagueVeloz.CoreFinanceiro.Dominio.Exceptions;
+using PagueVeloz.CoreFinanceiro.Dominio.Interfaces;
 using PagueVeloz.Eventos.CoreFinanceiro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace PagueVeloz.CoreFinanceiro.Aplicacao.Comandos
@@ -17,21 +20,21 @@ namespace PagueVeloz.CoreFinanceiro.Aplicacao.Comandos
     {
         private readonly IContaRepository _contaRepository;
         private readonly ITransacaoProcessadaRepository _transacaoProcessadaRepository;
-        private readonly IUnitOfWork _unitOfWork;
         private readonly IPublishEndpoint _publishEndpoint;
+        private readonly IUnitOfWork _unitOfWork;
         private readonly ILogger<ProcessarCreditoCommandHandler> _logger;
 
         public ProcessarCreditoCommandHandler(
             IContaRepository contaRepository,
             ITransacaoProcessadaRepository transacaoProcessadaRepository,
-            IUnitOfWork unitOfWork,
             IPublishEndpoint publishEndpoint,
+            IUnitOfWork unitOfWork, 
             ILogger<ProcessarCreditoCommandHandler> logger)
         {
             _contaRepository = contaRepository;
             _transacaoProcessadaRepository = transacaoProcessadaRepository;
-            _unitOfWork = unitOfWork;
             _publishEndpoint = publishEndpoint;
+            _unitOfWork = unitOfWork; 
             _logger = logger;
         }
 
@@ -40,85 +43,69 @@ namespace PagueVeloz.CoreFinanceiro.Aplicacao.Comandos
             if (await _transacaoProcessadaRepository.JaProcessadaAsync(request.ReferenceId, cancellationToken))
             {
                 _logger.LogWarning("Transação {ReferenceId} já processada (idempotência).", request.ReferenceId);
-                // Retornar 'success' pois a operação original foi um sucesso. | alert:buscar a resposta original
-                return new TransacaoResponse(
-                    $"DUPLICATE-{request.ReferenceId}", "success", 0, 0, 0, DateTime.UtcNow, null);
+                return new TransacaoResponse($"DUPLICATE-{request.ReferenceId}", "success", 0, 0, 0, DateTime.UtcNow, null);
             }
 
-            Conta? conta;
+            var conta = await _contaRepository.GetByIdAsync(request.AccountId, cancellationToken);
+            if (conta == null) return FailResponse("Conta não encontrada.", request.ReferenceId);
+
+            if (request.Currency != conta.Currency)
+                return FailResponse($"Moeda inválida. Esperado: {conta.Currency}", request.ReferenceId, conta);
+
             try
             {
-                //carrega agregado
-                conta = await _contaRepository.ObterPorIdAsync(request.AccountId, cancellationToken);
-                if (conta == null)
-                    return Falha("Conta não encontrada.", request.ReferenceId);
+                conta.Credit(request.Amount, request.ReferenceId);
 
-                //regra de dominio
-                var transacao = conta.Creditar(request.Amount, request.ReferenceId, request.Currency);
+                _contaRepository.Update(conta);
 
-                //grv idepotencia
-                _transacaoProcessadaRepository.Adicionar(new TransacaoProcessada(request.ReferenceId));
+                _transacaoProcessadaRepository.Adicionar(new TransacaoProcessada(request.ReferenceId, request.AccountId, request.ReferenceId, null));
 
-                // prepara evento [OUTBOX]
+                try
+                {
+                    await _unitOfWork.SaveChangesAsync(cancellationToken);
+                }
+                catch (DbUpdateConcurrencyException ex)
+                {
+                    _logger.LogWarning(ex, "Conflito de concorrência no crédito: {ReferenceId}", request.ReferenceId);
+                    throw new ConflitoConcorrenciaException("Conflito de concorrência detectado durante o crédito.", ex);
+                }
+
+                var transacao = conta.Transacoes.First(t => t.ReferenceId == request.ReferenceId);
+
+                string metadataJson = request.Metadata != null ? JsonSerializer.Serialize(request.Metadata) : "{}";
+
                 var evento = new ContaCreditadaEvent(
-                    conta.Id,
-                    transacao.Id,
+                    conta.AccountId,
+                    transacao.Id.ToString(),
                     request.ReferenceId,
                     request.Amount,
                     request.Currency,
-                    request.Metadata?.ToJsonString(),
-                    new SaldosContaDto(conta.Balance, conta.ReservedBalance, conta.AvailableBalance),
+                    metadataJson,
+                    new SaldosContaDto(conta.SaldoTotal, conta.SaldoReservadoEmCentavos, conta.SaldoDisponivelEmCentavos),
                     transacao.Timestamp
                 );
+
                 await _publishEndpoint.Publish(evento, cancellationToken);
+                conta.ClearDomainEvents();
 
-                //commit atomico
-                //salva a conta [v2], a transacao [nova], a transacaoProcessada[nova]
-                //e  evento [Outbox] em uma 1 transacao.
-                await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-                return new TransacaoResponse(
-                    transacao.Id,
-                    "success",
-                    conta.Balance,
-                    conta.ReservedBalance,
-                    conta.AvailableBalance,
-                    transacao.Timestamp,
-                    null
-                );
+                return SuccessResponse(conta, transacao);
             }
-            catch (DomainException ex) // Erro de regra de negócio
+            catch (DomainException ex)
             {
-                _logger.LogWarning(ex, "Falha na regra de negócio: {ReferenceId}", request.ReferenceId);
-                return Falha(ex.Message, request.ReferenceId);
+                _logger.LogWarning(ex, "Falha de negócio no crédito: {ReferenceId}", request.ReferenceId);
+                return FailResponse(ex.Message, request.ReferenceId, conta);
             }
-            //catch (DbUpdateException ex) // Lock Otimista ou Idempotência (Violação de PK)
-            catch (Exception ex) // Lock Otimista ou Idempotência (Violação de PK)
+            catch (Exception ex)
             {
-                //checa c e violação de PK [Idempotência]
-                //if (ex.InnerException is PostgresException pgEx && pgEx.SqlState == "23505")
-                //{
-                //    _logger.LogWarning(ex, "Conflito de idempotência [PK]: {ReferenceId}", request.ReferenceId);
-                //    return new TransacaoResponse($"DUPLICATE-{request.ReferenceId}", "success", 0, 0, 0, DateTime.UtcNow, null);
-                //}
-
-                //se n for, e provavelmnt conflito de concorrencia [Lock Otimista]
-                // _logger.LogWarning(ex, "Conflito de concorrência ]Lock Otimista]: {ReferenceId}", request.ReferenceId);
-                // return Falha("Conflito de concorrência. Tente novamente.", request.ReferenceId);
-                //}
-                // catch (Exception ex) 
-                //{
-                _logger.LogError(ex, "Erro inesperado ao processar {ReferenceId}", request.ReferenceId);
-                return Falha("Erro interno do servidor.", request.ReferenceId);
+                _logger.LogError(ex, "Erro interno no crédito: {ReferenceId}", request.ReferenceId);
+                return FailResponse("Erro interno.", request.ReferenceId, conta);
             }
         }
 
-        private TransacaoResponse Falha(string mensagemErro, string referenceId)
-        {
-            return new TransacaoResponse(
-                $"FAILED-{referenceId}", "failed", 0, 0, 0,
-                DateTime.UtcNow, mensagemErro
-            );
-        }
+        private static TransacaoResponse SuccessResponse(Conta conta, Transacao tx) => new(
+            $"{tx.ReferenceId}-PROCESSED", "success", conta.SaldoTotal, conta.SaldoReservadoEmCentavos, conta.SaldoDisponivelEmCentavos, tx.Timestamp, null);
+
+        private static TransacaoResponse FailResponse(string error, string refId, Conta? c = null) => new(
+            $"{refId}-FAILED", "failed", c?.SaldoTotal ?? 0, c?.SaldoReservadoEmCentavos ?? 0, c?.SaldoDisponivelEmCentavos ?? 0, DateTime.UtcNow, error);
     }
 }

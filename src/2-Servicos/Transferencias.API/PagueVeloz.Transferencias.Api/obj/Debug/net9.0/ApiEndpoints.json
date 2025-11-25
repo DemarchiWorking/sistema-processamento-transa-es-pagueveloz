@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "PagueVeloz.Transferencias.Api.Controller.TransfersController",
+    "Method": "SolicitarTransferencia",
+    "RelativePath": "api/Transfers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PagueVeloz.Transferencias.Api.Controller.TransferenciaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PagueVeloz.Contas.Dominio.Aggregates;
 using System;
@@ -16,8 +17,6 @@ namespace PagueVeloz.Contas.Infra.Data.Configurations
             builder.ToTable("Contas");
 
             builder.HasKey(c => c.Id);
-
-            //alert:id nao gerado pelo banco
             builder.Property(c => c.Id).ValueGeneratedNever();
 
             builder.Property(c => c.ClienteId).IsRequired();
@@ -28,10 +27,18 @@ namespace PagueVeloz.Contas.Infra.Data.Configurations
                 .HasConversion<string>()
                 .HasMaxLength(50);
 
-            //alert:relacionamento verificar no desafio
-            // builder.HasOne<Cliente>()
-            //     .WithMany()
-            //     .HasForeignKey(c => c.ClienteId);
+            builder.Property(c => c.LockVersion)
+                    .HasColumnName("lock_version")
+                    .HasColumnType("bigint")
+                    .HasDefaultValue(1u)
+                    .ValueGeneratedOnAdd()              
+                    .ValueGeneratedOnAddOrUpdate()  
+                    .IsConcurrencyToken();
+
+            builder.HasOne<Cliente>()
+                .WithMany()
+                .HasForeignKey(c => c.ClienteId)
+                .IsRequired();
         }
     }
 }

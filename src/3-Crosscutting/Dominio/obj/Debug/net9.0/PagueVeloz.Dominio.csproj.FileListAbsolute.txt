@@ -1,0 +1,12 @@
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\bin\Debug\net9.0\PagueVeloz.Dominio.deps.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\bin\Debug\net9.0\PagueVeloz.Dominio.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\bin\Debug\net9.0\PagueVeloz.Dominio.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\PagueVeloz.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\PagueVeloz.Dominio.AssemblyInfoInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\PagueVeloz.Dominio.AssemblyInfo.cs
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\PagueVeloz.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\PagueVeloz.Dominio.sourcelink.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\PagueVeloz.Dominio.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\refint\PagueVeloz.Dominio.dll
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\PagueVeloz.Dominio.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\3-Crosscutting\Dominio\obj\Debug\net9.0\ref\PagueVeloz.Dominio.dll

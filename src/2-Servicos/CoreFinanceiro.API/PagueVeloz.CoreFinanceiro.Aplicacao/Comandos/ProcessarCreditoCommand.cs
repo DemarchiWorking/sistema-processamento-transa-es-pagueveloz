@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using PagueVeloz.CoreFinanceiro.Dominio.DTOs.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +9,13 @@ using System.Threading.Tasks;
 
 namespace PagueVeloz.CoreFinanceiro.Aplicacao.Comandos
 {
-    ///<summary>
-    ///comando para o MediatR representa a intencao de creditar.
-    ///</summary>
-    public record ProcessarCreditoCommand(
-        string AccountId,
-        long Amount,
-        string Currency,
-        string ReferenceId,
-        JsonObject? Metadata //jsonObject
-    ) : IRequest<TransacaoResponse>;
+    public class ProcessarCreditoCommand : IRequest<TransacaoResponse>
+    {
+        public string AccountId { get; init; } = string.Empty;
+        public long Amount { get; init; }
+        public string Currency { get; init; } = "BRL";
+        public string ReferenceId { get; init; } = string.Empty;
+        public string TransactionId { get; init; }
+        public Dictionary<string, object>? Metadata { get; init; }
+    }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PagueVeloz.CoreFinanceiro.Dominio.Aggregates;
+using PagueVeloz.CoreFinanceiro.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,6 @@ namespace PagueVeloz.CoreFinanceiro.Infra.Data.Configurations
         {
             builder.ToTable("TransacoesProcessadas");
 
-            //a PKe o ReferenceId para garantir unicidade.
             builder.HasKey(t => t.ReferenceId);
             builder.Property(t => t.ReferenceId).ValueGeneratedNever();
         }

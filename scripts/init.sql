@@ -1,0 +1,7 @@
+CREATE DATABASE conta;
+CREATE DATABASE financeiro;
+CREATE DATABASE transferencia;
+
+GRANT ALL PRIVILEGES ON DATABASE conta TO postgres;
+GRANT ALL PRIVILEGES ON DATABASE financeiro TO postgres;
+GRANT ALL PRIVILEGES ON DATABASE transferencia TO postgres;

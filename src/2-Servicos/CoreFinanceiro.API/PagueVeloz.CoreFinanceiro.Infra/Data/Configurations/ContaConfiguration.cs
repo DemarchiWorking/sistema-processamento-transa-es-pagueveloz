@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PagueVeloz.CoreFinanceiro.Dominio.Aggregates;
+using PagueVeloz.CoreFinanceiro.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace PagueVeloz.CoreFinanceiro.Infra.Data.Configurations
 {
     public class ContaConfiguration : IEntityTypeConfiguration<Conta>
@@ -14,30 +14,38 @@ namespace PagueVeloz.CoreFinanceiro.Infra.Data.Configurations
         public void Configure(EntityTypeBuilder<Conta> builder)
         {
             builder.ToTable("Contas");
-            builder.HasKey(c => c.Id);
-            builder.Property(c => c.Id).ValueGeneratedNever(); // PK vem do Contas.API
 
-            //lockotimista [postgre]
-            //alerta:IMPORTANTEbuilder.UseXminAsConcurrencyToken(); corrigir
+            builder.HasKey(c => c.AccountId);
+            builder.Property(c => c.AccountId)
+                .ValueGeneratedNever()
+                .HasMaxLength(150);
+
+            builder.Property(c => c.LockVersion)
+                .IsRequired()
+                .IsRowVersion(); 
 
             builder.HasMany(c => c.Transacoes)
-            .WithOne()
-            .HasForeignKey(t => t.ContaId)
-            .OnDelete(DeleteBehavior.Cascade); //se a conta se for, o historico vai junto.
+                .WithOne()
+                .HasForeignKey(t => t.ContaId)
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Cascade);
 
-            //propriedades do ledger
-            builder.Property(c => c.Balance).IsRequired();
-            builder.Property(c => c.ReservedBalance).IsRequired();
-            //propriedades replicadas [p/ autonomia]
-            builder.Property(c => c.CreditLimit).IsRequired();
+            builder.Property(c => c.SaldoDisponivelEmCentavos).IsRequired();
+            builder.Property(c => c.SaldoReservadoEmCentavos).IsRequired();
+            builder.Property(c => c.LimiteDeCreditoEmCentavos).IsRequired();
+            builder.Property(c => c.Currency).IsRequired().HasMaxLength(3);
+
+
             builder.Property(c => c.Status)
                 .IsRequired()
                 .HasConversion<string>()
                 .HasMaxLength(50);
 
-            //ignoramos propriedades calculadas
-            builder.Ignore(c => c.AvailableBalance);
-            builder.Ignore(c => c.PurchasingPower);
+            builder.Ignore(c => c.Id);
+
+            builder.Ignore(c => c.SaldoTotal);
+            builder.Ignore(c => c.PoderDeCompra);
+            builder.Ignore(c => c.DomainEvents);
         }
     }
 }

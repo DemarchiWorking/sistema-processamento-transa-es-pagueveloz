@@ -1,4 +1,5 @@
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\bin\Debug\net9.0\PagueVeloz.CoreFinanceiro.Infra.deps.json
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\bin\Debug\net9.0\PagueVeloz.CoreFinanceiro.Infra.runtimeconfig.json
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\bin\Debug\net9.0\PagueVeloz.CoreFinanceiro.Infra.dll
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\bin\Debug\net9.0\PagueVeloz.CoreFinanceiro.Infra.pdb
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\bin\Debug\net9.0\PagueVeloz.CoreFinanceiro.Aplicacao.dll
@@ -17,4 +18,5 @@ C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\Pa
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\obj\Debug\net9.0\PagueVeloz.CoreFinanceiro.Infra.dll
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\obj\Debug\net9.0\refint\PagueVeloz.CoreFinanceiro.Infra.dll
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\obj\Debug\net9.0\PagueVeloz.CoreFinanceiro.Infra.pdb
+C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\obj\Debug\net9.0\PagueVeloz.CoreFinanceiro.Infra.genruntimeconfig.cache
 C:\Users\Antonio Demarchi\source\repos\Meta\src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\obj\Debug\net9.0\ref\PagueVeloz.CoreFinanceiro.Infra.dll

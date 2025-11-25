@@ -1,0 +1,82 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  postgres:
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  contas_api:
+    build:
+      context: . 
+      dockerfile: src/2-Servicos/Contas.API/Dockerfile 
+    ports:
+      - "5000:8080" 
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+      postgres: { condition: service_healthy }
+    environment:
+      ConnectionStrings__ContaConnection: "Host=postgres;Port=5432;Database=conta;Username=postgres;Password=password"
+      MessageBroker__Host: "rabbitmq"
+      MessageBroker__Username: "admin"
+      MessageBroker__Password: "admin"
+    restart: always
+
+  corefinanceiro_api:
+    build:
+      context: .
+      dockerfile: src/2-Servicos/CoreFinanceiro.API/Dockerfile
+    ports:
+      - "5001:8080"
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+      postgres: { condition: service_healthy }
+    environment:
+      ConnectionStrings__FinanceiroConnection: "Host=postgres;Port=5432;Database=financeiro;Username=postgres;Password=password"
+      MessageBroker__Host: "rabbitmq"
+      MessageBroker__Username: "admin"
+      MessageBroker__Password: "admin"
+    restart: always
+
+  transferencias_api:
+    build:
+      context: .
+      dockerfile: src/2-Servicos/Transferencias.API/Dockerfile
+    ports:
+      - "5002:8080"
+    depends_on:
+      rabbitmq: { condition: service_healthy }
+      postgres: { condition: service_healthy }
+    environment:
+      ConnectionStrings__TransferenciaConnection: "Host=postgres;Port=5432;Database=transferencia;Username=postgres;Password=password"
+      MessageBroker__Host: "rabbitmq"
+      MessageBroker__Username: "admin"
+      MessageBroker__Password: "admin"
+    restart: always
+
+volumes:
+  postgres_data:

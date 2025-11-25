@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Gateways", "1-Gateways", "{2CEC881B-AF31-ED73-E6AF-C36B1742B43E}"
 EndProject
@@ -20,6 +23,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Servicos", "2-Servicos", "{248C09D6-89A3-0D67-0359-A0E32E3ACF95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contas.API", "Contas.API", "{61E06EE1-9ABB-3729-4441-F53CD38E8A30}"
+	ProjectSection(SolutionItems) = preProject
+		src\2-Servicos\Contas.API\Dockerfile = src\2-Servicos\Contas.API\Dockerfile
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.Contas.Api", "src\2-Servicos\Contas.API\PagueVeloz.Contas.Api\PagueVeloz.Contas.Api.csproj", "{184BEF36-B9F6-4C7E-8BB3-5843BD48FBDC}"
 EndProject
@@ -30,6 +36,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.Contas.Infra", "src\2-Servicos\Contas.API\PagueVeloz.Contas.Infra\PagueVeloz.Contas.Infra.csproj", "{9519C499-5F55-484D-9F9B-38CA0A9A8B1A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CoreFinanceiro.API", "CoreFinanceiro.API", "{CDEF08B2-1A22-759D-90A0-EEB4677F3C88}"
+	ProjectSection(SolutionItems) = preProject
+		src\2-Servicos\CoreFinanceiro.API\Dockerfile = src\2-Servicos\CoreFinanceiro.API\Dockerfile
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.CoreFinanceiro.Api", "src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Api\PagueVeloz.CoreFinanceiro.Api.csproj", "{7B877E12-0A6D-4FA3-B638-D33E5CA2E879}"
 EndProject
@@ -40,6 +49,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.CoreFinanceiro.Infra", "src\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Infra\PagueVeloz.CoreFinanceiro.Infra.csproj", "{AD5331A0-A729-4932-952B-D6B2D20672E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transferencias.API", "Transferencias.API", "{EC936560-87C0-5F9E-EDCB-069D3A6E7A19}"
+	ProjectSection(SolutionItems) = preProject
+		src\2-Servicos\Transferencias.API\Dockerfile = src\2-Servicos\Transferencias.API\Dockerfile
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.Transferencias.Api", "src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Api\PagueVeloz.Transferencias.Api.csproj", "{4322D201-ACC3-4701-A79D-980F3EF71058}"
 EndProject
@@ -48,6 +60,23 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.Transferencias.Dominio", "src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Dominio\PagueVeloz.Transferencias.Dominio.csproj", "{12950C6D-CE04-4290-9E91-360CBB4FC475}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.Transferencias.Infra", "src\2-Servicos\Transferencias.API\PagueVeloz.Transferencias.Infra\PagueVeloz.Transferencias.Infra.csproj", "{7036C133-8402-4ECA-8547-5A926AF6B40C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infraestrutura", "4-Infraestrutura", "{AC41BBBA-50A4-884E-B24B-B3E206955A17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{70144FFD-AE9D-A5D1-0304-2ECBBDBF486B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.Shared.Infra", "src\4-Infraestrutura\Shared\PagueVeloz.Shared.Infra\PagueVeloz.Shared.Infra.csproj", "{BF81296F-104B-43EB-AC95-457508B2E19A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Testes", "5-Testes", "{D910F4C2-0C2A-D2F4-57A1-CC817DCFB6F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.Testes.Comum", "src\5-Testes\PagueVeloz.Testes.Comum\PagueVeloz.Testes.Comum.csproj", "{53D7787B-9637-4FD5-BED2-E1E160B30661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagueVeloz.Testes.Unitarios", "src\5-Testes\PagueVeloz.Testes.Unitarios\PagueVeloz.Testes.Unitarios.csproj", "{97180B01-8164-41FC-A072-146AF5DC1809}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6-Scripts", "6-Scripts", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		scripts\init.sql = scripts\init.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -227,6 +256,42 @@ Global
 		{7036C133-8402-4ECA-8547-5A926AF6B40C}.Release|x64.Build.0 = Release|Any CPU
 		{7036C133-8402-4ECA-8547-5A926AF6B40C}.Release|x86.ActiveCfg = Release|Any CPU
 		{7036C133-8402-4ECA-8547-5A926AF6B40C}.Release|x86.Build.0 = Release|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Debug|x64.Build.0 = Debug|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Debug|x86.Build.0 = Debug|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Release|x64.ActiveCfg = Release|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Release|x64.Build.0 = Release|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Release|x86.ActiveCfg = Release|Any CPU
+		{BF81296F-104B-43EB-AC95-457508B2E19A}.Release|x86.Build.0 = Release|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Debug|x64.Build.0 = Debug|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Debug|x86.Build.0 = Debug|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Release|x64.ActiveCfg = Release|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Release|x64.Build.0 = Release|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Release|x86.ActiveCfg = Release|Any CPU
+		{53D7787B-9637-4FD5-BED2-E1E160B30661}.Release|x86.Build.0 = Release|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Debug|x64.Build.0 = Debug|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Debug|x86.Build.0 = Debug|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Release|x64.ActiveCfg = Release|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Release|x64.Build.0 = Release|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Release|x86.ActiveCfg = Release|Any CPU
+		{97180B01-8164-41FC-A072-146AF5DC1809}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -254,5 +319,15 @@ Global
 		{CEF3AAEC-88AA-485A-8BE6-8E48E40FA9D1} = {EC936560-87C0-5F9E-EDCB-069D3A6E7A19}
 		{12950C6D-CE04-4290-9E91-360CBB4FC475} = {EC936560-87C0-5F9E-EDCB-069D3A6E7A19}
 		{7036C133-8402-4ECA-8547-5A926AF6B40C} = {EC936560-87C0-5F9E-EDCB-069D3A6E7A19}
+		{AC41BBBA-50A4-884E-B24B-B3E206955A17} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{70144FFD-AE9D-A5D1-0304-2ECBBDBF486B} = {AC41BBBA-50A4-884E-B24B-B3E206955A17}
+		{BF81296F-104B-43EB-AC95-457508B2E19A} = {70144FFD-AE9D-A5D1-0304-2ECBBDBF486B}
+		{D910F4C2-0C2A-D2F4-57A1-CC817DCFB6F3} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{53D7787B-9637-4FD5-BED2-E1E160B30661} = {D910F4C2-0C2A-D2F4-57A1-CC817DCFB6F3}
+		{97180B01-8164-41FC-A072-146AF5DC1809} = {D910F4C2-0C2A-D2F4-57A1-CC817DCFB6F3}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51B5CAE9-7931-4778-9F18-58DD66543000}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="FluentAssertions" Version="8.8.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PagueVeloz.Testes.Comum\PagueVeloz.Testes.Comum.csproj" />
+    <ProjectReference Include="..\..\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Dominio\PagueVeloz.CoreFinanceiro.Dominio.csproj" />
+    <ProjectReference Include="..\..\2-Servicos\CoreFinanceiro.API\PagueVeloz.CoreFinanceiro.Aplicacao\PagueVeloz.CoreFinanceiro.Aplicacao.csproj" />
+    <ProjectReference Include="..\..\2-Servicos\Contas.API\PagueVeloz.Contas.Dominio\PagueVeloz.Contas.Dominio.csproj" />
+    <ProjectReference Include="..\..\2-Servicos\Contas.API\PagueVeloz.Contas.Aplicacao\PagueVeloz.Contas.Aplicacao.csproj" />
+    <ProjectReference Include="..\..\3-Crosscutting\Eventos\PagueVeloz.Eventos.csproj" />
+  </ItemGroup>
+
+</Project>

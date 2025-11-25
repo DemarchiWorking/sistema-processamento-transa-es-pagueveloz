@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace PagueVeloz.Contas.Aplicacao.Interfaces
 {
-    ///<summary>
-    ///abstracao do repositorio de contas.
-    ///</summary>
     public interface IContaRepository
     {
-        ///<summary>
-        ///adiciona uma nova conta ao contexto [Unit of Work].
-        ///</summary>
-        void Adicionar(Conta conta);
+        Task<Conta> GetByIdAsync(string contaId, CancellationToken cancellationToken);
+
+        void Add(Conta conta);
+
+        void Update(Conta conta);
+        Task<long> ObterProximoNumeroContaAsync();
+
     }
 }

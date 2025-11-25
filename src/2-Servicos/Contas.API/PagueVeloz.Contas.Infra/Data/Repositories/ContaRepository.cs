@@ -1,4 +1,5 @@
-﻿using PagueVeloz.Contas.Aplicacao.Interfaces;
+﻿using Microsoft.EntityFrameworkCore;
+using PagueVeloz.Contas.Aplicacao.Interfaces;
 using PagueVeloz.Contas.Dominio.Aggregates;
 using System;
 using System.Collections.Generic;
@@ -17,11 +18,31 @@ namespace PagueVeloz.Contas.Infra.Data.Repositories
             _context = context;
         }
 
-        public void Adicionar(Conta conta)
+        public async Task<Conta> GetByIdAsync(string contaId, CancellationToken cancellationToken)
         {
-            //adiciona ao changetracker [ef Core].
-            //unit of Work | savechanges;
+            return await _context.Contas
+                //.Include(c => c.Transacoes)
+                .FirstOrDefaultAsync(c => c.Id == contaId, cancellationToken);
+        }
+
+        public void Add(Conta conta)
+        {
             _context.Contas.Add(conta);
+        }
+
+        public void Update(Conta conta)
+        {
+            _context.Contas.Update(conta);
+        }
+        public async Task<long> ObterProximoNumeroContaAsync()
+        {
+            var sql = "SELECT nextval('\"Contas\".\"ContaSeq\"')";
+
+            var result = await _context.Database
+                .SqlQueryRaw<long>(sql)
+                .ToListAsync();
+
+            return result.FirstOrDefault();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿//using MassTransit;
+﻿using MassTransit;
 using MediatR;
 using PagueVeloz.Contas.Aplicacao.Interfaces;
 using PagueVeloz.Contas.Dominio.Aggregates;
@@ -12,73 +12,60 @@ using PagueVeloz.Eventos.Contas;
 
 namespace PagueVeloz.Contas.Aplicacao.Comandos
 {
-    ///<summary>
-    ///caso de Uso: Handler para o CriarContaCommand.
-    ///orquestra a logica: validacao, execucao do dominio e persistencia.
-    ///</summary>
     public class CriarContaCommandHandler : IRequestHandler<CriarContaCommand, CriarContaResponse>
     {
         private readonly IClienteRepository _clienteRepository;
         private readonly IContaRepository _contaRepository;
         private readonly IUnitOfWork _unitOfWork;
-        //private readonly IPublishEndpoint _publishEndpoint;  //alerta:MassTransit
-
-        //private readonly IPublishEndpoint _publishEndpoint;
+        private readonly IPublishEndpoint _publishEndpoint; 
 
         public CriarContaCommandHandler(
             IClienteRepository clienteRepository,
             IContaRepository contaRepository,
-            IUnitOfWork unitOfWork//,
-            //IPublishEndpoint publishEndpoint
-            ) 
+            IUnitOfWork unitOfWork,
+            IPublishEndpoint publishEndpoint
+            )
         {
             _clienteRepository = clienteRepository;
             _contaRepository = contaRepository;
             _unitOfWork = unitOfWork;
-            //_publishEndpoint = publishEndpoint;
+            _publishEndpoint = publishEndpoint; 
         }
 
         public async Task<CriarContaResponse> Handle(CriarContaCommand request, CancellationToken cancellationToken)
         {
-            //validacao
-            //verificamos se o cliente informado existe.
             if (!await _clienteRepository.ExisteAsync(request.ClientId, cancellationToken))
             {
-                //alerta: usar uma exception customizada | result pattern | r etornar um erro 404/400.
                 throw new ApplicationException($"Cliente com ID '{request.ClientId}' não encontrado.");
             }
-
-            //execucao [regra de dominio]
-            //chamar a fabrica do agregado para criar a conta.
+            var id = _contaRepository.ObterProximoNumeroContaAsync();
             var conta = Conta.Criar(
-                        request.ClientId,
-                        request.CreditLimit
-                    );
+                id.Result,
+                request.ClientId,
+                request.CreditLimit
+            );
 
-            //persistencia [inicio da transacao]
-            //adicionar o novo agregado ao repositorio.
-            _contaRepository.Adicionar(conta);
+            _contaRepository.Add(conta);
 
-            //criacao do evento integracao
             var evento = new ContaCriadaEvent(
-                            conta.Id,
-                            conta.ClienteId,
-                            conta.LimiteDeCredito,
-                            (PagueVeloz.Eventos.Contas.StatusConta)conta.Status,
-                            DateTime.UtcNow,
-                            request.InitialBalance
-                        );
-            //await _publishEndpoint.Publish(evento, cancellationToken);
+                conta.Id,
+                conta.ClienteId,
+                conta.LimiteDeCredito,
+                (PagueVeloz.Eventos.Contas.StatusConta)conta.Status,
+                DateTime.UtcNow,
+                request.InitialBalance
+            );
+
+            await _publishEndpoint.Publish(evento, cancellationToken); 
 
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-            //resposta
             return new CriarContaResponse(
                 conta.Id,
                 conta.ClienteId,
                 conta.LimiteDeCredito,
                 conta.Status.ToString(),
-                DateTime.UtcNow  //<<pegar do banco
+                DateTime.UtcNow 
             );
         }
     }

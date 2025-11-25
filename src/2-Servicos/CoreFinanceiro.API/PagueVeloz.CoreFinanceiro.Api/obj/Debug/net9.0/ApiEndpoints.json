@@ -1,0 +1,62 @@
+[
+  {
+    "ContainingType": "PagueVeloz.CoreFinanceiro.Api.Controller.OperacaoController",
+    "Method": "ProcessOperation",
+    "RelativePath": "api/Operacao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PagueVeloz.CoreFinanceiro.Dominio.DTOs.Request.TransacaoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PagueVeloz.CoreFinanceiro.Api.Controller.TransacaoController",
+    "Method": "Post",
+    "RelativePath": "api/Transacao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PagueVeloz.CoreFinanceiro.Dominio.DTOs.Request.TransacaoFinanceiraRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "PagueVeloz.CoreFinanceiro.Dominio.DTOs.Response.TransacaoResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Object",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 409
+      }
+    ]
+  }
+]

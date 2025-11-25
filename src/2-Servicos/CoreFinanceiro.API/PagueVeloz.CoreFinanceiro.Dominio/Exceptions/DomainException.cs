@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace PagueVeloz.CoreFinanceiro.Dominio.Exceptions
 {
-    ///<summary>
-    ///excecao de dominio, p/ quando uma regra de negpcio e violada.
-    ///</summary>
     public class DomainException : Exception
     {
         public DomainException(string message) : base(message) { }
+
+        public DomainException(string message, Exception innerException)
+            : base(message, innerException) { }
+
+        protected DomainException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)
+            : base(info, context) { }
     }
 }

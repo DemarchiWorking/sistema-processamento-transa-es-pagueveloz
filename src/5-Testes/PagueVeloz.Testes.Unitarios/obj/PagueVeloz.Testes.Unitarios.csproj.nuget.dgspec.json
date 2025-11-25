@@ -1,0 +1,571 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Unitarios\\PagueVeloz.Testes.Unitarios.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj",
+        "projectName": "PagueVeloz.Contas.Aplicacao",
+        "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj",
+        "packagesPath": "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Antonio Demarchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj"
+              },
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.5.5, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj",
+        "projectName": "PagueVeloz.Contas.Dominio",
+        "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Antonio Demarchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Aplicacao\\PagueVeloz.CoreFinanceiro.Aplicacao.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Aplicacao\\PagueVeloz.CoreFinanceiro.Aplicacao.csproj",
+        "projectName": "PagueVeloz.CoreFinanceiro.Aplicacao",
+        "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Aplicacao\\PagueVeloz.CoreFinanceiro.Aplicacao.csproj",
+        "packagesPath": "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Aplicacao\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Antonio Demarchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Dominio\\PagueVeloz.CoreFinanceiro.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Dominio\\PagueVeloz.CoreFinanceiro.Dominio.csproj"
+              },
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.5.5, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[9.0.11, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Dominio\\PagueVeloz.CoreFinanceiro.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Dominio\\PagueVeloz.CoreFinanceiro.Dominio.csproj",
+        "projectName": "PagueVeloz.CoreFinanceiro.Dominio",
+        "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Dominio\\PagueVeloz.CoreFinanceiro.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Antonio Demarchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.5.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj",
+        "projectName": "PagueVeloz.Eventos",
+        "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj",
+        "packagesPath": "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Antonio Demarchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Comum\\PagueVeloz.Testes.Comum.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Comum\\PagueVeloz.Testes.Comum.csproj",
+        "projectName": "PagueVeloz.Testes.Comum",
+        "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Comum\\PagueVeloz.Testes.Comum.csproj",
+        "packagesPath": "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Comum\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Antonio Demarchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Unitarios\\PagueVeloz.Testes.Unitarios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Unitarios\\PagueVeloz.Testes.Unitarios.csproj",
+        "projectName": "PagueVeloz.Testes.Unitarios",
+        "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Unitarios\\PagueVeloz.Testes.Unitarios.csproj",
+        "packagesPath": "C:\\Users\\Antonio Demarchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Unitarios\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Antonio Demarchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Aplicacao\\PagueVeloz.Contas.Aplicacao.csproj"
+              },
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\Contas.API\\PagueVeloz.Contas.Dominio\\PagueVeloz.Contas.Dominio.csproj"
+              },
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Aplicacao\\PagueVeloz.CoreFinanceiro.Aplicacao.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Aplicacao\\PagueVeloz.CoreFinanceiro.Aplicacao.csproj"
+              },
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Dominio\\PagueVeloz.CoreFinanceiro.Dominio.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\2-Servicos\\CoreFinanceiro.API\\PagueVeloz.CoreFinanceiro.Dominio\\PagueVeloz.CoreFinanceiro.Dominio.csproj"
+              },
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\3-Crosscutting\\Eventos\\PagueVeloz.Eventos.csproj"
+              },
+              "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Comum\\PagueVeloz.Testes.Comum.csproj": {
+                "projectPath": "C:\\Users\\Antonio Demarchi\\source\\repos\\Meta\\src\\5-Testes\\PagueVeloz.Testes.Comum\\PagueVeloz.Testes.Comum.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[8.8.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.12.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

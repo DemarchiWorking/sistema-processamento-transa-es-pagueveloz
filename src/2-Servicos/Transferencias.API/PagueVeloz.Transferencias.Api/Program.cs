@@ -1,12 +1,44 @@
-var builder = WebApplication.CreateBuilder(args);
+using MassTransit;
+using Microsoft.EntityFrameworkCore;
+using PagueVeloz.Transferencias.Aplicacao.Sagas;
+using PagueVeloz.Transferencias.Dominio.Sagas;
+using PagueVeloz.Transferencias.Infra.Data;
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<TransferenciasDbContext>(options =>
+    options.UseNpgsql(configuration.GetConnectionString("TransferenciaConnection")));
+
+builder.Services.AddMassTransit(x =>
+{
+    x.AddSagaStateMachine<TransferenciaStateMachine, TransferenciaState>()
+     .EntityFrameworkRepository(r =>
+     {
+         r.ConcurrencyMode = ConcurrencyMode.Optimistic;
+         r.AddDbContext<DbContext, TransferenciasDbContext>();
+     });
+
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(configuration["MessageBroker:Host"], "/", h =>
+        {
+            h.Username(configuration["MessageBroker:Username"]);
+            h.Password(configuration["MessageBroker:Password"]);
+        });
+
+        cfg.ConfigureEndpoints(context);
+    });
+});
+
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -14,28 +46,5 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
