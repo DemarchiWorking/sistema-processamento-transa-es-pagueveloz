@@ -1,7 +1,7 @@
 Processo Seletivo
 Desenvolvedor C# Pleno
 
-#Desafio
+# Desafio
 Tema: Implementar um sistema de processamento de transações financeiras
 Versão: 1.0
 
@@ -15,7 +15,7 @@ Rio de Janeiro
 
 
 
-#Tutorial para Execução do Projeto .NET 9:
+# Tutorial para Execução do Projeto .NET 9:
 
 
 Link: https://github.com/DemarchiWorking/sistema-processamento-transa-es-pagueveloz
@@ -108,7 +108,7 @@ Fácil execução
 
 
 
-#Projetos Principais:
+# Projetos Principais:
 PagueVeloz.Contas
 PagueVeloz.CoreFinanceiro
 
@@ -128,7 +128,7 @@ PagueVeloz.Contas
 
 
 
-#1. Introdução
+# 1. Introdução
 
 
 1.1 Propósito
@@ -172,7 +172,7 @@ Gerenciamento de saldos e transações transferido ao CoreFinanceiro. Saldo inic
 
 
 
-#3. Modelo de Domínio
+# 3. Modelo de Domínio
 
 3.1 Entidades
 
@@ -197,7 +197,7 @@ AccountId, ClientId, CreditLimit, Status, CreatedAt, InitialBalance
 
 
 
-#4. Camada de Aplicação (Comandos)
+# 4. Camada de Aplicação (Comandos)
 
 Comando
 Handler
@@ -213,7 +213,7 @@ IClienteRepository, IContaRepository, IUnitOfWork, IPublishEndpoint
 
 
 
-#5. Camada de Infraestrutura 
+# 5. Camada de Infraestrutura 
 
 
 5.1 Repositórios
@@ -251,7 +251,7 @@ Sequence ContaSeq para numeração.
 Wrapper simples para SaveChangesAsync() com suporte a transações.
 
 
-#6. API REST
+# 6. API REST
 
 
 Endpoint
@@ -276,11 +276,11 @@ curl -X POST http://localhost:5000/api/contas -H "Content-Type: application/json
 
 
 
-#PagueVeloz.CoreFinanceiro
+# PagueVeloz.CoreFinanceiro
 
 
 
-#1. Introdução
+# 1. Introdução
 
 
 1.1 Propósito
@@ -309,7 +309,7 @@ RF17: Suportar metadata opcional.
 RF18: Gerar eventos assíncronos.
 
 
-#2. Visão Geral da Arquitetura
+# 2. Visão Geral da Arquitetura
 
 
 2.1 Diagrama de Camadas
@@ -322,7 +322,7 @@ RF18: Gerar eventos assíncronos.
 
 
 
-#3. Modelo de Domínio
+# 3. Modelo de Domínio
 
 
 3.1 Entidades e Aggregates
@@ -343,7 +343,7 @@ Registro de movimentos financeiros.
 
 
 
-#4. Camada de Aplicação (Comandos)
+# 4. Camada de Aplicação (Comandos)
 
 
 Comando
@@ -385,7 +385,7 @@ Transações atômicas via UnitOfWork (Begin/Commit/Rollback).
 
 
 
-#5. Camada de Infraestrutura
+# 5. Camada de Infraestrutura
 
 
 5.1 Repositórios
@@ -418,7 +418,7 @@ Tabelas: Contas, TransacoesProcessadas, Movimentos
 Gerencia transações, commit, rollback em falhas.
 
 
-#6. API REST
+# 6. API REST
 
 
 
@@ -454,8 +454,8 @@ curl -X POST http://localhost:5001/api/transacao -H "Content-Type: application/j
 
 
 
-Testes
-#1. Introdução
+# Testes
+1. Introdução
 
 
 Foram feitos alguns testes unitários para a entidade Conta do PagueVeloz.CoreFinanceiro. 
@@ -477,7 +477,7 @@ Princípio AAA Pattern
 
 
 
-#2. Visão Geral dos Testes
+# 2. Visão Geral dos Testes
 
 
 Os testes estão organizados em classes temáticas para facilitar manutenção:
@@ -488,7 +488,7 @@ ContaTests_ReservaCaptura: Operações de reserva/captura.
 
 
 
-#3. Detalhes dos Testes por Classe
+# 3. Detalhes dos Testes por Classe
 
 
 
