@@ -8,9 +8,9 @@ Versão: 1.0
 Stack: C# (.NET 9)
 
 
-Candidato: Antonio Eduardo Silveira Demarchi
-Recrutadora: Renata Mota
-Rio de Janeiro
+Candidato: Antonio Eduardo Silveira Demarchi <br>
+Recrutadora: Renata Mota <br>
+Rio de Janeiro  <br>
 11/2025
 
 
