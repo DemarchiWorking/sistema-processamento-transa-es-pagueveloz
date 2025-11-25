@@ -77,10 +77,7 @@ http://localhost:5001/api/Transacao
 }
 4°
 
-Documentação
-
-
-
+# Documentação
 
 Camada
 Tecnologia
@@ -109,7 +106,7 @@ Fácil execução
 
 
 # Projetos Principais:
-PagueVeloz.Contas
+PagueVeloz.Contas <br>
 PagueVeloz.CoreFinanceiro
 
 
