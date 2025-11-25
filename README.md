@@ -20,18 +20,19 @@ Rio de Janeiro
 
 Link: https://github.com/DemarchiWorking/sistema-processamento-transa-es-pagueveloz <br>
 Documento: https://github.com/DemarchiWorking/sistema-processamento-transacoes-pagueveloz/blob/main/DesafioPagueVeloz.docx.pdf
+<br><br>
+Instalar o Docker, iniciar o ambiente virtualizado <br>
+Baixar os projetos com todos arquivos <br>
+Entrar na pasta <br>
+Rodar o comando: <br>
+docker compose up          [ou docker compose up -d --build]<br>
+docker compose ps <br>
+docker ps -a <br>
+Pegue os ID’s do meta-contas_api, meta-corefinanceiro_api, meta-transferencias_api e execute o comando com ids respectivos (ou de o start via docker desktop). Exemplo: <br>
+docker start f6b74e6cf2f5 c6732820e09b d65e28bca404 <br>
+Vai executar um console mostrando a porta que a aplicação está rodando. <br>
 
-Instalar o Docker, iniciar o ambiente virtualizado
-Baixar os projetos com todos arquivos
-Entrar na pasta 
-Rodar o comando:
-docker compose up          [ou docker compose up -d --build]
-docker compose ps
-docker ps -a
-Pegue os ID’s do meta-contas_api, meta-corefinanceiro_api, meta-transferencias_api e execute o comando com ids respectivos (ou de o start via docker desktop). Exemplo:
-docker start f6b74e6cf2f5 c6732820e09b d65e28bca404
-Vai executar um console mostrando a porta que a aplicação está rodando.
-Como Executar Operações
+# Como Executar Operações
 http://localhost:5000/api/Clientes
 {
     "clienteId": "1",
